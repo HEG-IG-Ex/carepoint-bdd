@@ -21,29 +21,63 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY PKG_CAREPOINT AS
     
     TYPE table_accounting IS TABLE OF typ_account_record;
 
-    FUNCTION getNextAvailabilityForDoc (i_doc_id INTEGER) RETURN SYS_REFCURSOR AS
-        c_availability SYS_REFCURSOR; 
+     FUNCTION getNextAvailabilityForDoc(i_doc_id IN INTEGER) RETURN SYS_REFCURSOR AS
+        c_availability SYS_REFCURSOR;
     BEGIN
-        OPEN c_availability FOR SELECT DT FROM (SELECT SYSDATE + (level - 1) AS DT FROM dual CONNECT BY SYSDATE + (level - 1) <= ADD_MONTHS(SYSDATE, 1))
-        LEFT OUTER JOIN (SELECT APP_APTN_DATE FROM CRP_APPOINTMENT WHERE APP_DOC_ID = i_doc_id) ON APP_APTN_DATE = DT ORDER BY DT;
+        OPEN c_availability FOR
+            WITH next_10_days AS (
+                SELECT TRUNC(SYSDATE) + LEVEL - 1 AS availability_date
+                FROM DUAL
+                CONNECT BY LEVEL <= 10
+            ),
+            work_hours AS (
+                SELECT TO_CHAR(TRUNC(SYSDATE) + 9/24 + (LEVEL-1)/24, 'HH24:MI') AS work_hour
+                FROM DUAL
+                CONNECT BY LEVEL <= 10
+            ),
+            availability_query AS (
+                SELECT
+                    availability_date,
+                    work_hour,
+                    CASE
+                        WHEN work_hour <= '12:00' THEN 1 -- Exclude the morning if current time is before noon
+                        ELSE 2 -- Exclude the afternoon if current time is after noon
+                    END AS pod,
+                    TO_CHAR(availability_date, 'D') AS weekday_number
+                FROM
+                    next_10_days
+                CROSS JOIN
+                    work_hours
+            ),
+            availability_avl_query AS (
+                SELECT
+                    AVL_PER_ID,
+                    AVL_WKD_ID,
+                    AVL_POD_ID
+                FROM
+                    crp_availability
+                WHERE
+                    AVL_PER_ID = i_doc_id -- Use the input parameter here
+                    AND AVL_IS_AVAILABLE = 1
+            )
+            SELECT
+                availability_query.availability_date,
+                availability_query.work_hour
+            FROM
+                availability_query
+            INNER JOIN
+                availability_avl_query
+            ON
+                availability_query.pod = availability_avl_query.AVL_POD_ID
+                AND availability_query.weekday_number = availability_avl_query.AVL_WKD_ID;
+    
         IF c_availability%NOTFOUND THEN
             CLOSE c_availability;
-            RAISE_APPLICATION_ERROR(-20002, 'Doctor doesn''t have any availability for the next month');
+            RAISE_APPLICATION_ERROR(-20002, 'Doctor doesn''t have any availability for the next 10 days');
         END IF;
+    
         RETURN c_availability;
     END getNextAvailabilityForDoc;
-
-    FUNCTION getNextAvailabilityForSpe (i_spe_id INTEGER) RETURN SYS_REFCURSOR AS
-        c_availability SYS_REFCURSOR; 
-    BEGIN
-        OPEN c_availability FOR SELECT DT FROM (SELECT SYSDATE + (level - 1) AS DT FROM dual CONNECT BY SYSDATE + (level - 1) <= ADD_MONTHS(SYSDATE, 1))
-        LEFT OUTER JOIN (SELECT APP_APTN_DATE FROM CRP_APPOINTMENT WHERE APP_DOC_ID IN (SELECT DOC_PER_ID FROM CRP_DOC WHERE DOC_SPE_ID = i_spe_id)) ON APP_APTN_DATE = DT ORDER BY DT;
-        IF c_availability%NOTFOUND THEN
-            CLOSE c_availability;
-            RAISE_APPLICATION_ERROR(-20003, 'No Doctor for this Specialty have any availability for the next month');
-        END IF;
-        RETURN c_availability;
-    END getNextAvailabilityForSpe;
 
 
     FUNCTION getInvoiceForAppointment(i_app_id IN NUMBER) RETURN SYS_REFCURSOR AS
