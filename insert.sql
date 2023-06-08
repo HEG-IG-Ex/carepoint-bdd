@@ -38,15 +38,16 @@ COMMIT;
 -- Insurance
 -- =============================================================================================
 INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('CSS Versicherung','Tribschenstrasse 21, 6005 Luzern');
-INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Helsana Versicherungen AG','Zï¿½richstrasse 130, 8640 Rapperswil-Jona');
+INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Helsana Versicherungen AG','Zürichstrasse 130, 8640 Rapperswil-Jona');
 INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Sanitas Krankenversicherung','Gempelerstrasse 130, 3052 Zollikofen');
 INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Concordia Krankenversicherung','Bundesplatz 15, 6003 Luzern');
-INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('SWICA Krankenversicherung','Rï¿½merstrasse 38, 8400 Winterthur');
+INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('SWICA Krankenversicherung','Römerstrasse 38, 8400 Winterthur');
 INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('KPT Krankenkasse','Laupenstrasse 19, 3008 Bern');
-INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Groupe Mutuel Krankenversicherung','Rue des Cï¿½dres 5, 1950 Sion');
-INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Sympany Krankenversicherung','Rï¿½sslimatte 20, 6002 Luzern');
+INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Groupe Mutuel Krankenversicherung','Rue des Cèdres 5, 1950 Sion');
+INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Sympany Krankenversicherung','Rösslimatte 20, 6002 Luzern');
 INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Visana Krankenversicherung','Weltpoststrasse 19, 3015 Bern');
-INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Assura Krankenversicherung','Rue des Moulins 10, 2004 Neuchï¿½tel');
+INSERT INTO CRP_INSURANCE (INS_NAME, INS_ADDRESS) VALUES ('Assura Krankenversicherung','Rue des Moulins 10, 2004 Neuchâtel');
+
 COMMIT;
 
 -- =============================================================================================
@@ -72,7 +73,7 @@ INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER
 INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, PAT_INS_ID) VALUES ('max.keller','b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e','Max','Keller','+41 79 456 789','max.keller@example.com',9);
 INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, PAT_INS_ID) VALUES ('emma.hofmann','b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e','Emma','Hofmann','+41 76 567 890','emma.hofmann@example.com',7);
 INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, PAT_INS_ID) VALUES ('janine.schneider','b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e','Janine','Schneider','+41 79 678 901','janine.schneider@example.com',4);
-INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, PAT_INS_ID) VALUES ('lukas.mÃ¼ller','b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e','Lukas','MÃ¼ller','+41 76 789 012','lukas.mueller@example.com',8);
+INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, PAT_INS_ID) VALUES ('lukas.müller','b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e','Lukas','Müller','+41 76 789 012','lukas.mueller@example.com',8);
 INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, PAT_INS_ID) VALUES ('sarah.fischer','b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e','Sarah','Fischer','+41 79 890 123','sarah.fischer@example.com',1);
 INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, PAT_INS_ID) VALUES ('benjamin.baumgartner','b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e','Benjamin','Baumgartner','+41 78 901 234','benjamin.baumgartner@example.com',10);
 INSERT INTO VW_PATIENTS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, PAT_INS_ID) VALUES ('anna.schmid','b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e','Anna','Schmid','+41 79 012 345','anna.schmid@example.com',6);
@@ -132,13 +133,13 @@ COMMIT;
 -- =============================================================================================
 -- Docto - psw = doctor
 -- =============================================================================================
-INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('emilie.schmid','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Ã‰milie','Schmid','079 123 45 67','emilie.schmid@carepoint.ch',250,'15.01.22', 3);
-INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('dominique.mÃ¼ler','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Dominique','MÃ¼ller','079 234 56 78','dominique.muller@carepoint.ch',200,'01.05.21', 10);
+INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('emilie.schmid','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Émilie','Schmid','079 123 45 67','emilie.schmid@carepoint.ch',250,'15.01.22', 3);
+INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('dominique.müller','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Dominique','Müller','079 234 56 78','dominique.muller@carepoint.ch',200,'01.05.21', 10);
 INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('marc.roth','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Marc','Roth','079 345 67 89','marc.roth@carepoint.ch',300,'10.10.20', 20);
 INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('simone.meier','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Simone','Meier','079 456 78 90','simone.meier@carepoint.ch',220,'20.02.23', 16);
 INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('patrick.brunner','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Patrick','Brunner','079 567 89 01','patrick.brunner@carepoint.ch',350,'15.06.24', 28);
-INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('sabine.bÃ¶chli','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Sabine','BÃ¶chli','079 678 90 12','sabine.bachli@carepoint.ch',190,'01.09.22', 9);
-INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('pierre.lÃ¼thi','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Pierre','LÃ¼thi','079 789 01 23','pierre.luthi@carepoint.ch',240,'05.11.23', 2);
+INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('sabine.bächli','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Sabine','Bächli','079 678 90 12','sabine.bachli@carepoint.ch',190,'01.09.22', 9);
+INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('pierre.lüthi','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Pierre','Lüthi','079 789 01 23','pierre.luthi@carepoint.ch',240,'05.11.23', 2);
 INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('olivier.zimmermann','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Olivier','Zimmermann','079 890 12 34','olivier.zimmermann@carepoint.ch',280,'15.03.25', 23);
 INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('sandrine.meyer','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Sandrine','Meyer','079 901 23 45','sandrine.meyer@carepoint.ch',260,'01.12.21', 13);
 INSERT INTO VW_DOCTORS (PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID) VALUES ('thomas.baumann','1f0160076c9f42a157f0a8f0dcc68e02ff69045b','Thomas','Baumann','079 012 34 56','thomas.baumann@carepoint.ch',400,'20.08.26', 31);
@@ -201,13 +202,13 @@ INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_P
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('30543', 2, 1, 'Insertion of endotracheal tube', 250);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('36410', 3, 1, 'Blood transfusion, per unit', 300);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('36415', 3, 1, 'Routine venipuncture', 20);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('43860', 2, 2, 'Laparoscopy, surgical, with lysis of adhesions', 1200);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('43860', NULL, 2, 'Laparoscopy, surgical, with lysis of adhesions', 1200);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('44388', 3, 1, 'Colonoscopy, flexible, proximal to splenic flexure; diagnostic, with or without collection of specimen(s) by brushing or washing, with or without colon decompression (separate procedure)', 650);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('45331', 5, 1, 'Sigmoidoscopy, flexible; diagnostic, 30 minutes or greater', 375);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('45378', 5, 1, 'Colonoscopy, with or without biopsy, 60 minutes or greater', 900);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('45380', 5, 1, 'Colonoscopy, with or without biopsy, 30 minutes or less', 600);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('58100', 1, 1, 'Total abdominal hysterectomy, with or without removal of tube(s), with or without removal of ovary(s)', 1500);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('64483', 3, 2, 'Injection(s), anesthetic agent(s) and/or steroid; transforaminal epidural, with imaging guidance (fluoroscopy or CT)', 800);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('64483', NULL, 2, 'Injection(s), anesthetic agent(s) and/or steroid; transforaminal epidural, with imaging guidance (fluoroscopy or CT)', 800);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('71010', 3, 1, 'X-ray of chest, single view', 75);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('71020', 3, 1, 'X-ray of chest, 2 views, frontal and lateral', 90);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('71260', 2, 1, 'CT scan of chest, with contrast material', 450);
@@ -218,23 +219,23 @@ INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_P
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('77057', 3, 1, 'Screening mammography, bilateral', 175);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('80050', 2, 1, 'General health panel, comprehensive metabolic panel (CMP), complete blood count (CBC) with automated differential', 125);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('80061', 2, 1, 'Lipid panel, fasting, including total cholesterol, HDL cholesterol, LDL cholesterol, and triglycerides', 85);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('81002', 1, 2, 'Urinalysis, by dip stick or tablet reagent for bilirubin, glucose, hemoglobin, ketones, leukocytes, nitrite, pH, protein, specific gravity, urobilinogen, any number of these constituents; non-automated, with microscopy', 80);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('81002', NULL, 2, 'Urinalysis, by dip stick or tablet reagent for bilirubin, glucose, hemoglobin, ketones, leukocytes, nitrite, pH, protein, specific gravity, urobilinogen, any number of these constituents; non-automated, with microscopy', 80);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('81003', 2, 1, 'Urinalysis, automated with microscopy', 50);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('81025', 2, 1, 'Urine pregnancy test, by visual color comparison methods', 30);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('82947', 2, 1, 'Glucose (sugar) measurement, fasting or 2 hours after eating', 45);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('83036', 2, 1, 'Hemoglobin A1c (glycated hemoglobin); for monitoring purposes', 60);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('84450', 4, 2, 'Thyroxine (T4) measurement, 10 minutes or greater', 85);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('84450', NULL, 2, 'Thyroxine (T4) measurement, 10 minutes or greater', 85);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('85018', 2, 1, 'Hemoglobin, quantitative', 35);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('85025', 2, 1, 'Complete blood count (CBC), automated and automated differential WBC count', 65);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('87804', 3, 1, 'Infectious agent antigen detection by immunoassay with direct optical observation; Streptococcus, group A', 60);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('87880', 3, 1, 'Infectious agent antigen detection by immunoassay with direct optical observation; respiratory syncytial virus (RSV)', 85);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('90471', 3, 1, 'Administration of 1 vaccine', 75);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('90715', 3, 1, 'Administration of 1 vaccine, pneumococcal conjugate vaccine, 13 valent, for ages 6 weeks through 5 years, for intramuscular use', 100);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('90791', 3, 2, 'Psychiatric diagnostic evaluation, 60 minutes or greater', 500);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92014', 2, 2, 'Comprehensive eye exam, established patient', 200);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92136', 1, 2, 'Ophthalmic biometry by partial coherence interferometry with intraocular lens power calculation', 500);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('90791', NULL, 2, 'Psychiatric diagnostic evaluation, 60 minutes or greater', 500);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92014', NULL, 2, 'Comprehensive eye exam, established patient', 200);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92136', NULL, 2, 'Ophthalmic biometry by partial coherence interferometry with intraocular lens power calculation', 500);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92507', 2, 1, 'Treatment of speech, language, voice, communication, and/or auditory processing disorder; individual', 200);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92543', 1, 2, 'Caloric vestibular test with recording, bilateral; bithermal (i.e., one warm and one cool irrigations in each ear)', 350);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92543', NULL, 2, 'Caloric vestibular test with recording, bilateral; bithermal (i.e., one warm and one cool irrigations in each ear)', 350);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92550', 2, 1, 'Behavioral hearing assessment, includes assessment of hearing threshold for air and bone conduction and speech reception threshold, with or without impedance testing, newborn or infant (age 0 to 24 months)', 300);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92557', 3, 1, 'Comprehensive audiometry, 20 minutes or greater', 300);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('92567', 2, 1, 'Treatment of speech sound production disorder; with evaluation', 250);
@@ -246,33 +247,33 @@ INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_P
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93016', 1, 1, 'Cardiovascular stress test, tracing only, without physician supervision', 275);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93017', 1, 1, 'Cardiovascular stress test, 45 minutes or greater', 700);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93042', 1, 1, 'Rhythm ECG, 24-hour continuous recording and storage; includes recording, scanning analysis with report, physician review, and interpretation', 750);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93306', 4, 2, 'Echocardiogram, transthoracic, real-time with image documentation (2D), complete', 750);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93306', NULL, 2, 'Echocardiogram, transthoracic, real-time with image documentation (2D), complete', 750);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93610', 3, 1, 'Electrophysiologic evaluation of subcutaneous implantable defibrillator (includes defibrillation threshold evaluation, induction of arrhythmia, and evaluation of sensing and pacing configurations)', 800);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93799', 3, 1, 'Unlisted cardiovascular service or procedure', 1000);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93922', 4, 2, 'Arterial Doppler ultrasound, bilateral, complete', 450);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93971', 4, 2, 'Duplex scan of arterial inflow and venous outflow of abdominal, pelvic, scrotal contents and/or retroperitoneal organs; complete study', 850);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93922', NULL, 2, 'Arterial Doppler ultrasound, bilateral, complete', 450);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('93971', NULL, 2, 'Duplex scan of arterial inflow and venous outflow of abdominal, pelvic, scrotal contents and/or retroperitoneal organs; complete study', 850);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('94010', 2, 1, 'Spirometry, including graphic record, 10 minutes or greater', 75);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('94060', 2, 1, 'Pulmonary function test, spirometry, before and after bronchodilator', 200);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('95831', 4, 2, 'Muscle testing, manual with report, each extremity or trunk muscle group, excluding hand', 150);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('95834', 4, 2, 'Muscle testing, manual, total body (excluding hand); pre- and post-assessment (List separately in addition to code for primary procedure)', 300);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('96375', 2, 2, 'Intravenous infusion, each additional hour', 150);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('97035', 4, 2, 'Ultrasound therapy, each 15 minutes', 75);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('97112', 4, 2, 'Neuromuscular reeducation of movement, balance, coordination, kinesthetic sense, posture, and/or proprioception for sitting and/or standing activities, each 15 minutes', 125);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('97532', 4, 2, 'Development of cognitive skills to improve attention, memory, problem solving, (includes compensatory training), direct (one-on-one) patient contact, each 15 minutes', 100);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('95831', NULL, 2, 'Muscle testing, manual with report, each extremity or trunk muscle group, excluding hand', 150);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('95834', NULL, 2, 'Muscle testing, manual, total body (excluding hand); pre- and post-assessment (List separately in addition to code for primary procedure)', 300);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('96375', NULL, 2, 'Intravenous infusion, each additional hour', 150);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('97035', NULL, 2, 'Ultrasound therapy, each 15 minutes', 75);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('97112', NULL, 2, 'Neuromuscular reeducation of movement, balance, coordination, kinesthetic sense, posture, and/or proprioception for sitting and/or standing activities, each 15 minutes', 125);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('97532', NULL, 2, 'Development of cognitive skills to improve attention, memory, problem solving, (includes compensatory training), direct (one-on-one) patient contact, each 15 minutes', 100);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('98943', 3, 1, 'Chiropractic manipulative treatment (CMT); extraspinal, 2 or more regions', 100);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99202', 2, 2, 'Office visit for a new patient, problem-focused history and examination', 150);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99203', 2, 2, 'Office visit for a new patient, detailed history and examination', 250);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99204', 2, 2, 'Office visit for a new patient, comprehensive history and examination, moderate medical decision-making', 350);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99212', 2, 2, 'Office visit for an established patient, problem-focused history and examination', 125);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99213', 2, 2, 'Office visit for an established patient, expanded problem-focused history and examination', 175);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99214', 2, 2, 'Office visit for an established patient, detailed history and examination, moderate medical decision-making', 225);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99244', 2, 2, 'Office consultation for a new or established patient, detailed history and examination, high-complexity medical decision-making', 375);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99255', 2, 2, 'Prolonged service in office or other outpatient setting, requiring direct (face-to-face) patient contact beyond the usual service; each additional 30 minutes', 150);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99281', 1, 2, 'Emergency department visit for the evaluation and management of a patient, which requires these 3 key components: a problem focused history; a problem focused examination; straightforward medical decision making.', 300);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99291', 1, 2, 'Critical care, evaluation and management of the critically ill or critically injured patient; first 30-74 minutes', 850);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99202', NULL, 2, 'Office visit for a new patient, problem-focused history and examination', 150);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99203', NULL, 2, 'Office visit for a new patient, detailed history and examination', 250);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99204', NULL, 2, 'Office visit for a new patient, comprehensive history and examination, moderate medical decision-making', 350);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99212', NULL, 2, 'Office visit for an established patient, problem-focused history and examination', 125);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99213', NULL, 2, 'Office visit for an established patient, expanded problem-focused history and examination', 175);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99214', NULL, 2, 'Office visit for an established patient, detailed history and examination, moderate medical decision-making', 225);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99244', NULL, 2, 'Office consultation for a new or established patient, detailed history and examination, high-complexity medical decision-making', 375);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99255', NULL, 2, 'Prolonged service in office or other outpatient setting, requiring direct (face-to-face) patient contact beyond the usual service; each additional 30 minutes', 150);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99281', NULL, 2, 'Emergency department visit for the evaluation and management of a patient, which requires these 3 key components: a problem focused history; a problem focused examination; straightforward medical decision making.', 300);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99291', NULL, 2, 'Critical care, evaluation and management of the critically ill or critically injured patient; first 30-74 minutes', 850);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99455', 2, 1, 'Work-related musculoskeletal disorders: evaluation of the injured employee, includes report, each 15 minutes', 150);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99497', 1, 2, 'Advance care planning including the explanation and discussion of advance directives such as standard forms (with completion of such forms, when performed), by the physician or other qualified health care professional; face-to-face with the patient, family member(s), and/or surrogate.', 250);
-INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('G0008', 1, 2, 'Administration of influenza virus vaccine', 30);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('99497', NULL, 2, 'Advance care planning including the explanation and discussion of advance directives such as standard forms (with completion of such forms, when performed), by the physician or other qualified health care professional; face-to-face with the patient, family member(s), and/or surrogate.', 250);
+INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('G0008', NULL, 2, 'Administration of influenza virus vaccine', 30);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('G0202', 1, 1, 'Screening mammography, bilateral (2-view study of each breast)', 150);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('J0130', 1, 1, 'Injection, adenosine, 6 mg/2 mL (3 mg/mL)', 100);
 INSERT INTO CRP_SERVICE (SER_CODE, SER_TIM_ID, SER_INV_ID, SER_NAME, SER_PRICE_PER_UNIT) VALUES ('J1885', 1, 1, 'Injection, ketorolac tromethamine, per 15 mg', 50);
@@ -296,7 +297,6 @@ INSERT INTO CRP_SERVICE_PROVIDED (SPR_APP_ID, SPR_SER_CODE, SPR_DURATION) VALUES
 INSERT INTO CRP_SERVICE_PROVIDED (SPR_APP_ID, SPR_SER_CODE, SPR_DURATION) VALUES (3,11730,5);
 INSERT INTO CRP_SERVICE_PROVIDED (SPR_APP_ID, SPR_SER_CODE, SPR_DURATION) VALUES (4,12002,15);
 INSERT INTO CRP_SERVICE_PROVIDED (SPR_APP_ID, SPR_SER_CODE, SPR_DURATION) VALUES (4,20610,15);
-
 
 -- =============================================================================================
 -- Medicine
@@ -3971,7 +3971,17 @@ INSERT INTO CRP_MEDICATION (MED_NAME) VALUES ('Zyrtec-D');
 INSERT INTO CRP_MEDICATION (MED_NAME) VALUES ('Zyrtec-D 12 Hour');
 INSERT INTO CRP_MEDICATION (MED_NAME) VALUES ('Zytiga');
 INSERT INTO CRP_MEDICATION (MED_NAME) VALUES ('Zyvox');
-INSERT INTO CRP_MEDICATION (MED_NAME) VALUES ('ZzzQuil');
+INSERT INTO CRP_MEDICATION (MED_NAME)
+
+-- =============================================================================================
+-- Prescriptions
+-- =============================================================================================
+INSERT INTO CRP_PRESCRIPTION (PRE_APP_ID, PRE_MED_ID, PRE_DESCRIPTION) VALUES (1,1,'Dosage: 20mg, Frequency: Once daily at bedtime, Duration: Ongoing, Instructions: Avoid consuming grapefruit or grapefruit juice');
+INSERT INTO CRP_PRESCRIPTION (PRE_APP_ID, PRE_MED_ID, PRE_DESCRIPTION) VALUES (2,2,'Dosage: 500mg, Frequency: Twice daily, Duration: 10 days, Instructions: Take with food');
+INSERT INTO CRP_PRESCRIPTION (PRE_APP_ID, PRE_MED_ID, PRE_DESCRIPTION) VALUES (2,3,'Dosage: 400mg, Frequency: Every 6 hours as needed for pain, Duration: Not to exceed 4 doses in 24 hours, Instructions: Take with a full glass of water');
+INSERT INTO CRP_PRESCRIPTION (PRE_APP_ID, PRE_MED_ID, PRE_DESCRIPTION) VALUES (3,4,'Dosage: 50mg, Frequency: Once daily in the morning, Duration: Ongoing, Instructions: Take consistently at the same time each day');
+INSERT INTO CRP_PRESCRIPTION (PRE_APP_ID, PRE_MED_ID, PRE_DESCRIPTION) VALUES (4,5,'Dosage: 2 puffs, Frequency: Every 4-6 hours as needed for asthma symptoms, Duration: As needed for symptom relief, Instructions: Shake well before each use');
+INSERT INTO CRP_PRESCRIPTION (PRE_APP_ID, PRE_MED_ID, PRE_DESCRIPTION) VALUES (4,6,'Dosage: 20mg, Frequency: Once daily before breakfast, Duration: 4-8 weeks, Instructions: Swallow the capsule whole; do not crush or chew');
 COMMIT;
 
 EXIT
